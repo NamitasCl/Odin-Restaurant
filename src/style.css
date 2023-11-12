@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;900&family=Oswald:wght@600;700&family=Work+Sans:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #120111;
+    --fondo-atenuado: #120111a0; 
+    --texto: #ecf0e9;
+    --fondo-btn: #ff9302;
+    --fuente-burger: 'Work Sans';
+    --fuente-general: 'Oswald';
+    --otra-fuente: 'Hanken Grotesk';
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente-general);
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 20px;
+    color: white;
+}
+
+#container {
+    margin-top: 2rem;
+    max-width: 80vw;
+    height: 100vh;
+}
+
+/* NAV BAR */
+
+header {
+    width: 80vw;
+}
+
+header nav {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.logo img {
+    width: 7rem;
+}
+
+.menuLinks ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-weight: 500;
+}
+
+.rrss {
+    display: flex;
+    place-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+
+#contenido {
+    margin-top: 2rem;
+    width: 80vw;
+}
+
+#contenido .portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+#contenido .izquierda, .derecha {
+    width: 40vw;
+}
+
+#contenido .izquierda .titulo p:first-child {
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6rem;
+}
+
+#contenido .izquierda {
+    padding: 1rem;
+}
+
+#contenido .izquierda .titulo p:last-child {
+    font-size: 8rem;
+    font-weight: 900;
+    color: white;
+    font-family: var(--otra-fuente);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    line-height: 9rem;
+}
+
+#contenido .separador {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 1vh;
+    background-color: white;
+}
+
+#contenido .final {
+    padding: 2rem;
+    text-align: justify;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+#contenido .final h3 {
+    letter-spacing: 3px;
+    margin-bottom: 1.5ch;
+}
+
+#contenido .final p {
+    letter-spacing: 1px;
+    margin-bottom: 1.5ch;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: var(--otra-fuente);
+}
+
+#contenido .final button {
+    padding: 1ch 7ch;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--fondo-btn);
+    color: var(--fondo);
+    font-weight: 600;
+    font-family: var(--otra-fuente);
+
+}
+
+.derecha {
+    position: relative;
+    width: 100%;
+    display: flex;
+    place-items: center;
+}
+
+.derecha img {
+    width: 100%;
+}
+
+.premium-stamp {
+    text-align: center;
+    line-height: 1.4rem;
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border: 1px solid white;
+    background-color: var(--fondo-btn);
+    color: var(--fondo);
+    border-radius: 50%;
+    transform: rotate(-20deg);
+    top: 0;
+    left: 3rem;
+}
+
+.premium-stamp h1 {
+    position: absolute;
+    top: 23%;
+    height: 100%;
+}
+
+/* MENU */
+
+#menu {
+    margin-top: 5rem;
+    width: 80vw;
+}
+
+#menu .portada {
+    display: grid;
+    grid-template-columns: 27vw 1fr;
+    place-items: start;
+}
+
+#menu .izquierda p:first-child {
+    font-size: 3rem;
+    line-height: 1rem;
+}
+
+#menu .separador {
+    margin-bottom: 1rem;
+    width: 85%;
+    height: 1vh;
+    background-color: white;
+}
+
+#menu .izquierda p:last-child {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+#menu .final {
+    font-size: 4rem;
+    letter-spacing: 3.4rem;
+    line-height: 5rem;
+}
+
+#menu .burger-expl {
+    margin-top: 2rem;
+}
+
+#menu .burger-expl img {
+    width: 70%;
+}
+
+
+#menu .derecha {
+    background-color: var(--texto);
+    height: 100%;
+}
+
+#menu .derecha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: start;
+    color: var(--fondo);
+    font-size: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 10px 5px 20px;
+}
+
+#menu .derecha .burgers,
+#menu .derecha .fries,
+#menu .derecha .drinks,
+#menu .derecha .desserts {
+    width: 100%;
+    position: relative;
+    
+}
+
+#menu .burgers .title,
+#menu .drinks .title {
+    background-color: var(--fondo-btn);
+    color: var(--fondo);
+    border-radius: 0 40px 40px 0;
+    width: 50%;
+    text-align: center;
+}
+
+#menu .fries .title,
+#menu .desserts .title{
+    background-color: var(--fondo);
+    color: var(--fondo-btn);
+    border-radius: 0 40px 40px 0;
+    width: 50%;
+    text-align: center;
+}
+
+#menu .title {
+    font-size: 1.6rem;
+}
+
+#menu .products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: .8rem;
+    margin: 10px 0 10px 0;
+    text-align: left;
+}
+
+#menu .products .product-cont {
+    margin: 0 10px 0 0;
+}
+
+#menu .products p {
+    color: var(--fondo-atenuado);
+}
+
+.product-price {
+    place-self: center;
+    font-size: 1.1rem;
+    color: var(--fondo-atenuado);
+}
+
+.product-price span {
+    position: relative;
+}
+
+.product-price span:after {
+    content: "ADD+";
+    position: absolute;
+    width: 60%;
+    height: 62%;
+    color: #0b0c31;
+    top: 24px;
+    left: 15px;
+    font-size: .7rem;
+    cursor: pointer;
+    background-color: #ffbf00;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+/* ABOUT */
+#about {
+    margin-top: 5rem;
+    width: 80vw;
+}
+
+#about .portada {
+    display: grid;
+    grid-template-columns: 27vw 1fr;
+    place-items: start;
+}
+
+#about .izquierda p:first-child {
+    font-size: 3rem;
+    line-height: 1rem;
+}
+
+#about .separador {
+    margin-bottom: 1rem;
+    width: 85%;
+    height: 1vh;
+    background-color: white;
+}
+
+#about .izquierda p:last-child {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+#about .final {
+    font-size: 4rem;
+    letter-spacing: 3.4rem;
+    line-height: 5rem;
+}
+
+#about .derecha {
+    background-color: var(--texto);
+    color: var(--fondo-atenuado);
+    border-radius: 10px;
+    padding: 1ch 2ch;
+}
+
+.about-cont h1 {
+    color: var(--fondo);
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.about-cont > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
