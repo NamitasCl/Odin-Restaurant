@@ -2,7 +2,7 @@
 node_modules/
 
 # Directorio de salida de Webpack (generalmente dist)
-dist/
+#dist/
 
 # Archivos de configuración de Webpack personalizados
 webpack.config.js
