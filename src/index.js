@@ -16,6 +16,7 @@ let e = about();
 let container = document.createElement('div');
 container.id = 'container';
 container.append(b);
+container.append(c);
 document.body.append(container);
 
 let li = document.querySelectorAll('ul li');
@@ -29,6 +30,11 @@ li[1].addEventListener('click', ()=>{
 li[2].addEventListener('click', ()=>{
     render(contact());
 });
+
+let logo = document.querySelector('.logo');
+logo.addEventListener('click', () => {
+    render(portada());
+})
 
 
 

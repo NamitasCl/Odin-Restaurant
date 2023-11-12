@@ -53,6 +53,7 @@ header nav {
 
 .logo img {
     width: 7rem;
+    cursor: pointer;
 }
 
 .menuLinks ul {
@@ -60,6 +61,10 @@ header nav {
     list-style: none;
     gap: 2rem;
     font-weight: 500;
+}
+
+.menuLinks ul li {
+    cursor: pointer;
 }
 
 .rrss {
